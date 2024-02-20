@@ -1,4 +1,4 @@
-# .github/workflows/main.yaml
+# .github/workflows/selftest.yaml
 # Copyright 2024 Keith Maxwell
 # SPDX-License-Identifier: Apache-2.0
 
@@ -8,7 +8,7 @@ on: # yamllint disable-line rule:truthy
   workflow_dispatch:
 
 jobs:
-  main:
+  selftest:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
