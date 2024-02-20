@@ -21,5 +21,6 @@ jobs:
           incus launch images:debian/12/cloud c1
           incus exec c1 -- cloud-init status --wait
           incus exec c1 -- cat /etc/os-release
+      - run: yamllint .
       - run: npm exec --yes embedme -- --verify README.md
 # vim: set filetype=yaml.action :

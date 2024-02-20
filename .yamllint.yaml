@@ -1,0 +1,13 @@
+# .yamllint.yaml
+# Copyright 2024 Keith Maxwell
+# SPDX-License-Identifier: CC0-1.0
+
+extends: default
+
+# to be compatible with prettier
+rules:
+  document-start: disable
+  comments:
+    min-spaces-from-content: 1
+  braces:
+    max-spaces-inside: 1
