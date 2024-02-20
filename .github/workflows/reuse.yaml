@@ -1,0 +1,15 @@
+# .github/workflows/reuse.yaml
+# Copyright 2024 Keith Maxwell
+# SPDX-License-Identifier: CC0-1.0
+
+on: # yamllint disable-line rule:truthy
+  push: { branches: [main] }
+  pull_request: { branches: [main] }
+  workflow_dispatch:
+
+jobs:
+  reuse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: fsfe/reuse-action@v2
