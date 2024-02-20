@@ -1,0 +1,24 @@
+# .github/workflows/main.yaml
+# Copyright 2024 Keith Maxwell
+# SPDX-License-Identifier: Apache-2.0
+
+on: # yamllint disable-line rule:truthy
+  push: { branches: [main] }
+  pull_request: { branches: [main] }
+  workflow_dispatch:
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./
+      - run: |
+          set -x
+          incus admin init --auto
+          incus --version
+          incus launch images:debian/12/cloud c1
+          incus exec c1 -- cloud-init status --wait
+          incus exec c1 -- cat /etc/os-release
+
+# vim: set filetype=yaml.action :
