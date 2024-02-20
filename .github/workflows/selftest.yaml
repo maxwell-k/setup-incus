@@ -14,10 +14,10 @@ jobs:
       - uses: actions/checkout@v4
       - uses: fsfe/reuse-action@v2
       - uses: ./
-      - run: |
+      - name: Run Incus commands
+        run: |
           set -x
           incus admin init --auto
-          incus --version
           incus launch images:debian/12/cloud c1
           incus exec c1 -- cloud-init status --wait
           incus exec c1 -- cat /etc/os-release
