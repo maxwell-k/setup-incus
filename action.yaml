@@ -73,9 +73,9 @@ runs:
         sudo apt-get update
         sudo apt-get install --yes incus
         sudo sed -i s/incus-admin/adm/ \
-          /opt/incus/lib/systemd/system/incus.service
+          /usr/lib/systemd/system/incus.service
         sudo sed -i s/incus-admin/adm/ \
-          /opt/incus/lib/systemd/system/incus.socket
+          /usr/lib/systemd/system/incus.socket
         sudo systemctl daemon-reload
         sudo systemctl restart incus.socket
         incus --version
