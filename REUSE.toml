@@ -1,0 +1,12 @@
+version = 1
+SPDX-PackageName = "setup-incus"
+SPDX-PackageSupplier = "Keith Maxwell <keith.maxwell@gmail.com>"
+SPDX-PackageDownloadLocation = "https://github.com/maxwell-k/setup-incus"
+
+[[annotations]]
+path = [".en.utf-8.add", ".gitignore"]
+SPDX-FileCopyrightText = "2024 Keith Maxwell"
+SPDX-License-Identifier = "CC0-1.0"
+
+# SPDX-FileCopyrightText: 2024 Keith Maxwell <keith.maxwell@gmail.com>
+# SPDX-License-Identifier: CC0-1.0
