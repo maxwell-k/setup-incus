@@ -6,8 +6,12 @@ extends: default
 
 # to be compatible with prettier
 rules:
-  document-start: disable
-  comments:
-    min-spaces-from-content: 1
   braces:
     max-spaces-inside: 1
+  comments-indentation: false
+  comments:
+    min-spaces-from-content: 1
+  document-start: disable
+  octal-values:
+    forbid-implicit-octal: true
+    forbid-explicit-octal: true
