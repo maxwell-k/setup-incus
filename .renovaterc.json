@@ -3,6 +3,9 @@
   "extends": [
     "config:best-practices"
   ],
+  "assignees": [
+    "maxwell-k"
+  ],
   "packageRules": [
     {
       "description": "Automerge upgrades to GitHub Actions",
