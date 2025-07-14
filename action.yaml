@@ -9,7 +9,6 @@ runs:
       # https://linuxcontainers.org/incus/docs/main/howto/network_bridge_firewalld/#prevent-connectivity-issues-with-incus-and-docker
       shell: bash
       run: |
-        set -x
         sudo snap remove lxd --purge
         sudo snap remove core20 --purge || true
         sudo apt-get autopurge --yes docker-ce docker-ce-cli uidmap
