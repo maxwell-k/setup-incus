@@ -10,7 +10,7 @@ jobs:
 
 on: { push: { branches: [main] } } # yamllint disable-line rule:truthy
 
-# .github/workflows/main.yaml
+# .github/workflows/readme.yaml
 # Copyright 2024 Keith Maxwell
 # SPDX-License-Identifier: Apache-2.0
 
