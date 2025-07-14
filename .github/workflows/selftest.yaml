@@ -20,4 +20,7 @@ jobs:
           incus exec c1 -- cat /etc/os-release
       - run: yamllint .
       - run: npm exec --yes embedme -- --verify README.md
+  renovate-config-validator:
+    # yamllint disable-line rule:line-length
+    uses: maxwell-k/dotlocalslashbin/.github/workflows/renovate.yaml@cb60f00144f887cd482609b344ae8ed78feadeed # v0.0.19
 # vim: set filetype=yaml.action :
