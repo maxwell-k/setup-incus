@@ -1,4 +1,4 @@
-# .github/workflows/selftest.yaml
+# .github/workflows/main.yaml
 # Copyright 2024 Keith Maxwell
 # SPDX-License-Identifier: Apache-2.0
 
@@ -14,13 +14,13 @@ jobs:
       - uses: actions/checkout@v4
       - uses: fsfe/reuse-action@v5
       - uses: ./
-      - name: Run Incus commands
-        run: |
-          set -x
-          incus admin init --auto
+      - run: |
           incus launch images:debian/12/cloud c1
           incus exec c1 -- cloud-init status --wait
           incus exec c1 -- cat /etc/os-release
       - run: yamllint .
       - run: npm exec --yes embedme -- --verify README.md
+  renovate-config-validator:
+    # yamllint disable-line rule:line-length
+    uses: maxwell-k/dotlocalslashbin/.github/workflows/renovate.yaml@cb60f00144f887cd482609b344ae8ed78feadeed # v0.0.19
 # vim: set filetype=yaml.action :
