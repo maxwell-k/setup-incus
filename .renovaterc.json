@@ -1,17 +1,11 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:best-practices"
-  ],
-  "assignees": [
-    "maxwell-k"
-  ],
+  "extends": ["config:best-practices"],
+  "assignees": ["maxwell-k"],
   "packageRules": [
     {
       "description": "Automerge upgrades to GitHub Actions",
-      "matchManagers": [
-        "github-actions"
-      ],
+      "matchManagers": ["github-actions"],
       "automerge": true
     }
   ]
