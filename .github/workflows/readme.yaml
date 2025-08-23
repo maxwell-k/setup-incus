@@ -8,7 +8,9 @@ jobs:
           incus exec c1 -- cloud-init status --wait
           incus exec c1 -- cat /etc/os-release
 
-on: { push: { branches: [main] } } # yamllint disable-line rule:truthy
+on: # yamllint disable-line rule:truthy
+  push: { branches: [main] }
+  workflow_dispatch:
 
 # .github/workflows/readme.yaml
 # Copyright 2024 Keith Maxwell
