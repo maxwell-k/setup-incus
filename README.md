@@ -12,7 +12,7 @@ main:
   steps:
     - uses: maxwell-k/setup-incus@main
     - run: |
-        incus launch images:debian/12/cloud c1
+        incus launch images:debian/13/cloud c1
         incus exec c1 -- cloud-init status --wait
         incus exec c1 -- cat /etc/os-release
 ```
