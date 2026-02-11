@@ -22,5 +22,5 @@ jobs:
       - run: npm exec --yes embedme -- --verify README.md
   renovate-config-validator:
     # yamllint disable-line rule:line-length
-    uses: maxwell-k/dotlocalslashbin/.github/workflows/renovate.yaml@632255b6626fff16a0b5c25ec0b1210e46763e65 # v0.0.26
+    uses: maxwell-k/dotlocalslashbin/.github/workflows/renovate.yaml@d1558d04ad82861ead2cce45fb850a05c47e4fc7 # v0.0.27
 # vim: set filetype=yaml.action :
