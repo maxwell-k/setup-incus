@@ -2,7 +2,7 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
-      - uses: maxwell-k/setup-incus@main
+      - uses: maxwell-k/setup-incus@3a1a72c48965408955ec5cf6935a34cf0a80fbec # main
       - run: |
           incus launch images:debian/13/cloud c1
           incus exec c1 -- cloud-init status --wait
