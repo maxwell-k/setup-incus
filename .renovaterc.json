@@ -7,6 +7,11 @@
       "description": "Automerge upgrades to GitHub Actions",
       "matchManagers": ["github-actions"],
       "automerge": true
+    },
+    {
+      "description": "Avoid pinning self-references",
+      "matchPackageNames": ["maxwell-k/setup-incus"],
+      "pinDigests": false
     }
   ]
 }
